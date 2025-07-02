@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6fxtdr8rwqw2"]
+
+[ext_resource type="Script" path="res://uiScripts/singleplayer.gd" id="1_fyemd"]
+
+[node name="singleplayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fyemd")
+
+[node name="snake3d" type="Button" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 139.0
+offset_right = 440.0
+offset_bottom = 251.0
+text = "snake3d"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 26.0
+offset_right = 132.0
+offset_bottom = 97.0
+text = "back"
+
+[connection signal="pressed" from="snake3d" to="." method="_on_snake_3d_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

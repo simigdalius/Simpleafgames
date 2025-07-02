@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ae2nwyssune"]
+
+[ext_resource type="Script" path="res://uiScripts/coop.gd" id="1_jw1t8"]
+
+[node name="coop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jw1t8")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 188.0
+offset_right = 258.0
+offset_bottom = 238.0
+text = "tic-tac-toe"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 34.0
+offset_right = 830.0
+offset_bottom = 157.0
+text = "co op gamesss"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 26.0
+offset_right = 132.0
+offset_bottom = 97.0
+text = "back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
