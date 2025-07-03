@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdxjjrx030pb8"]
+
+[ext_resource type="Script" path="res://coop/tictactoe/winner.gd" id="1_rqwje"]
+
+[node name="winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rqwje")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 649.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 59.0
+offset_right = 998.0
+offset_bottom = 242.0
+theme_override_font_sizes/font_size = 50
+text = "player wonnnn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 234.0
+offset_right = 797.0
+offset_bottom = 461.0
+text = "retry"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

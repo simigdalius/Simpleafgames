@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://brukjjtmdw02e"]
+[gd_scene load_steps=5 format=3 uid="uid://brukjjtmdw02e"]
 
 [ext_resource type="Script" path="res://coop/tictactoe/tictactoe.gd" id="1_lv6n3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tj1m7"]
 bg_color = Color(0.68975, 0.571446, 0.51955, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj5r4"]
-bg_color = Color(0.410076, 0, 0.169679, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hc35u"]
 bg_color = Color(0.992062, 0.00081187, 0.992056, 1)
@@ -80,22 +77,10 @@ offset_top = 414.0
 offset_right = 833.0
 offset_bottom = 575.0
 
-[node name="scoreandturns" type="Node2D" parent="."]
-
-[node name="Panel" type="Panel" parent="scoreandturns"]
-offset_left = 856.0
-offset_right = 1151.0
-offset_bottom = 647.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_mj5r4")
-
-[node name="Panel2" type="Panel" parent="scoreandturns"]
-offset_left = 2.0
-offset_right = 297.0
-offset_bottom = 647.0
-
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Panelkuklos" type="Panel" parent="Node2D"]
+visible = false
 offset_left = 378.0
 offset_top = 122.0
 offset_right = 418.0
@@ -103,6 +88,7 @@ offset_bottom = 162.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
 
 [node name="PanelX" type="Panel" parent="Node2D"]
+visible = false
 offset_left = 378.0
 offset_top = 123.0
 offset_right = 418.0
@@ -110,6 +96,7 @@ offset_bottom = 163.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
 
 [node name="Panelkuklos2" type="Panel" parent="Node2D"]
+visible = false
 offset_left = 557.0
 offset_top = 121.0
 offset_right = 597.0
@@ -117,13 +104,131 @@ offset_bottom = 161.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
 
 [node name="PanelX2" type="Panel" parent="Node2D"]
+visible = false
 offset_left = 557.0
 offset_top = 122.0
 offset_right = 597.0
 offset_bottom = 162.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
 
+[node name="Panelkuklos3" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 727.0
+offset_top = 128.0
+offset_right = 767.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX3" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 727.0
+offset_top = 129.0
+offset_right = 767.0
+offset_bottom = 169.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
+[node name="Panelkuklos4" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 379.0
+offset_top = 295.0
+offset_right = 419.0
+offset_bottom = 335.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX4" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 379.0
+offset_top = 296.0
+offset_right = 419.0
+offset_bottom = 336.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
+[node name="Panelkuklos5" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 551.0
+offset_top = 298.0
+offset_right = 591.0
+offset_bottom = 338.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX5" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 551.0
+offset_top = 299.0
+offset_right = 591.0
+offset_bottom = 339.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
+[node name="Panelkuklos6" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 724.0
+offset_top = 300.0
+offset_right = 764.0
+offset_bottom = 340.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX6" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 724.0
+offset_top = 301.0
+offset_right = 764.0
+offset_bottom = 341.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
+[node name="Panelkuklos7" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 378.0
+offset_top = 474.0
+offset_right = 418.0
+offset_bottom = 514.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX7" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 378.0
+offset_top = 475.0
+offset_right = 418.0
+offset_bottom = 515.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
+[node name="Panelkuklos8" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 544.0
+offset_top = 478.0
+offset_right = 584.0
+offset_bottom = 518.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX8" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 544.0
+offset_top = 479.0
+offset_right = 584.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
+[node name="Panelkuklos9" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 731.0
+offset_top = 478.0
+offset_right = 771.0
+offset_bottom = 518.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hc35u")
+
+[node name="PanelX9" type="Panel" parent="Node2D"]
+visible = false
+offset_left = 731.0
+offset_top = 479.0
+offset_right = 771.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7km8o")
+
 [connection signal="pressed" from="map/Button0_0" to="." method="_on_button_0_0_pressed"]
 [connection signal="pressed" from="map/Button0_1" to="." method="_on_button_0_1_pressed"]
 [connection signal="pressed" from="map/Button0_2" to="." method="_on_button_0_2_pressed"]
 [connection signal="pressed" from="map/Button1_0" to="." method="_on_button_1_0_pressed"]
+[connection signal="pressed" from="map/Button1_1" to="." method="_on_button_1_1_pressed"]
+[connection signal="pressed" from="map/Button1_2" to="." method="_on_button_1_2_pressed"]
+[connection signal="pressed" from="map/Button1_3" to="." method="_on_button_1_3_pressed"]
+[connection signal="pressed" from="map/Button1_4" to="." method="_on_button_1_4_pressed"]
+[connection signal="pressed" from="map/Button1_5" to="." method="_on_button_1_5_pressed"]
