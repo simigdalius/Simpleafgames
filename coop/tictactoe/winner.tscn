@@ -1,6 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxop60p8mhblc"]
+[gd_scene load_steps=8 format=3 uid="uid://bxop60p8mhblc"]
 
 [ext_resource type="Script" path="res://coop/tictactoe/winner.gd" id="1_rqwje"]
+[ext_resource type="Texture2D" uid="uid://ds741q2ipkw7l" path="res://coop/tictactoe/images/ChatGPT Image 8 Ιουλ 2025, 08_18_42 μ.μ..png" id="2_rumrq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7p3v"]
+texture = ExtResource("2_rumrq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ff3rt"]
+bg_color = Color(0.360784, 0.278431, 0.188235, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrxmw"]
+bg_color = Color(0.960784, 0.4, 0.231373, 0.698039)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xu8hq"]
+bg_color = Color(0.360784, 0.278431, 0.188235, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0l20i"]
+bg_color = Color(0.95887, 0.400164, 0.232766, 0.698039)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="winner" type="Control"]
 layout_mode = 3
@@ -15,24 +47,63 @@ script = ExtResource("1_rqwje")
 layout_mode = 0
 offset_right = 1150.0
 offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_m7p3v")
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 59.0
+offset_right = 896.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ff3rt")
+text = "player O won"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_left = 168.0
 offset_top = 59.0
 offset_right = 998.0
 offset_bottom = 242.0
 theme_override_font_sizes/font_size = 50
-text = "player wonnnn"
+text = "player X won"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 168.0
+offset_top = 59.0
+offset_right = 998.0
+offset_bottom = 242.0
+theme_override_font_sizes/font_size = 50
+text = "nobody won"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 350.0
-offset_top = 234.0
-offset_right = 797.0
-offset_bottom = 461.0
-text = "retry"
+offset_left = 344.0
+offset_top = 256.0
+offset_right = 791.0
+offset_bottom = 408.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_nrxmw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xu8hq")
+text = "RETRY"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 416.0
+offset_right = 791.0
+offset_bottom = 472.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_0l20i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xu8hq")
+text = "BACK TO MAIN MENU"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

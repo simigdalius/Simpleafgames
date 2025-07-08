@@ -2,7 +2,7 @@ extends Node2D
 
 var winner =0
 var count = 0
-
+var metra=0
 var grammh1 = [0,0,0]
 var grammh2 = [0,0,0]
 var grammh3 = [0,0,0]
@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_0_0_pressed() -> void:
+	metra=metra+1
 	if grammh1[0] == 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos.show()
@@ -33,6 +34,7 @@ func _on_button_0_0_pressed() -> void:
 
 
 func _on_button_0_1_pressed() -> void:
+	metra=metra+1
 	if grammh1[1] == 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos2.show()
@@ -45,6 +47,7 @@ func _on_button_0_1_pressed() -> void:
 
 
 func _on_button_0_2_pressed() -> void:
+	metra=metra+1
 	if grammh1[2]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos3.show()
@@ -57,6 +60,7 @@ func _on_button_0_2_pressed() -> void:
 
 
 func _on_button_1_0_pressed() -> void:
+	metra=metra+1
 	if grammh2[0]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos4.show()
@@ -68,6 +72,7 @@ func _on_button_1_0_pressed() -> void:
 			checkwinner()
 
 func _on_button_1_1_pressed() -> void:
+	metra=metra+1
 	if grammh2[1]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos5.show()
@@ -80,6 +85,7 @@ func _on_button_1_1_pressed() -> void:
 
 
 func _on_button_1_2_pressed() -> void:
+	metra=metra+1
 	if grammh2[2]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos6.show()
@@ -92,6 +98,7 @@ func _on_button_1_2_pressed() -> void:
 
 
 func _on_button_1_3_pressed() -> void:
+	metra=metra+1
 	if grammh3[0]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos7.show()
@@ -104,6 +111,7 @@ func _on_button_1_3_pressed() -> void:
 
 
 func _on_button_1_4_pressed() -> void:
+	metra=metra+1
 	if grammh3[1]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos8.show()
@@ -116,6 +124,7 @@ func _on_button_1_4_pressed() -> void:
 
 
 func _on_button_1_5_pressed() -> void:
+	metra=metra+1
 	if grammh3[2]== 0:
 		if seira() == 1:
 			$Node2D/Panelkuklos9.show()
@@ -151,20 +160,19 @@ func seira() -> int:
 
 func checkwinner() -> void:
 	winner=0
+	
 	if grammh1[0]==grammh1[1] and grammh1[2]==grammh1[0]:
 		winner=grammh1[0]
 	if grammh2[0]==grammh2[1] and grammh2[2]==grammh2[0]:
 		winner=grammh2[0]
 	if grammh3[0]==grammh3[1] and grammh3[2]==grammh3[0]:
 		winner=grammh3[0]
-
-
+		
 	if grammh1[0]==grammh2[1] and grammh3[2]==grammh1[0]:
 		winner=grammh1[0]
 	if grammh1[2]==grammh2[1] and grammh3[0]==grammh1[2]:
 		winner=grammh1[2]
-
-
+		
 	if grammh1[0]==grammh2[0] and grammh3[0]==grammh1[0]:
 		winner=grammh1[0]
 	if grammh1[1]==grammh2[1] and grammh3[1]==grammh1[1]:
@@ -172,9 +180,22 @@ func checkwinner() -> void:
 	if grammh1[2]==grammh2[2] and grammh3[2]==grammh1[2]:
 		winner=grammh1[2]
 		
-	if winner==1:
+	if winner != 0:
+		results(winner)
+	else:
+		if metra==9:
+			draw()
+
+func results(z) -> void:
+	if z==1:
+		Global.ntom =1
 		get_tree().change_scene_to_file("res://coop/tictactoe/winner.tscn")
-	if winner==2:
+	if z==2:
+		Global.ntom =2
 		get_tree().change_scene_to_file("res://coop/tictactoe/winner.tscn")
-	if winner==0:
-		return
+
+
+func draw() -> void:
+	Global.ntom =0
+	get_tree().change_scene_to_file("res://coop/tictactoe/winner.tscn")
+	return
